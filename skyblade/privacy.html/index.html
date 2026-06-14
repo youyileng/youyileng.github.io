@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for SkyBlade by BlueSkyStudio. Learn what data is collected, used, shared, retained, and how to contact us.">
+    <meta name="author" content="BlueSkyStudio">
+    <meta name="google-site-verification" content="w0i6kYODRf3JK-jUxWAIOKG-ZQNL3f3hKm8V3CuDLhM">
+    <title>Privacy Policy - SkyBlade</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0;
+        }
+
+        :root {
+            --ink: #08090a;
+            --night: #10100e;
+            --surface: #171612;
+            --panel: #1e1d19;
+            --line: rgba(247, 239, 218, 0.16);
+            --paper: #f8f0df;
+            --muted: #c9c0ad;
+            --ember: #ff4d2f;
+            --gold: #ffc857;
+            --sky: #63d7ff;
+            --moss: #84a66a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+            background: var(--ink);
+            color: var(--paper);
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.72;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--sky);
+            outline: none;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 16px;
+            top: -60px;
+            z-index: 20;
+            padding: 10px 14px;
+            background: var(--paper);
+            color: var(--ink);
+            border-radius: 6px;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid var(--line);
+            background: rgba(8, 9, 10, 0.88);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--paper);
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            background: var(--gold);
+            color: var(--ink);
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            min-height: 40px;
+            padding: 9px 13px;
+            border-radius: 6px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--paper);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .hero {
+            border-bottom: 1px solid var(--line);
+            background:
+                linear-gradient(90deg, rgba(8, 9, 10, 0.97), rgba(8, 9, 10, 0.7)),
+                url("splash1.png") center 18% / cover;
+        }
+
+        .hero-inner {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: clamp(56px, 9vw, 112px) 0 clamp(44px, 7vw, 84px);
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            max-width: 820px;
+            font-size: clamp(2.5rem, 6vw, 5.8rem);
+            line-height: 0.98;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .summary {
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            max-width: 760px;
+        }
+
+        .updated {
+            margin-top: 26px;
+            display: inline-flex;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        main {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: clamp(42px, 7vw, 76px) 0;
+        }
+
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 260px minmax(0, 1fr);
+            gap: 32px;
+            align-items: start;
+        }
+
+        .toc {
+            position: sticky;
+            top: 88px;
+            min-width: 0;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+            padding: 18px;
+        }
+
+        .toc h2 {
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .toc a {
+            display: block;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 7px 0;
+            font-size: 0.95rem;
+        }
+
+        .toc a:hover,
+        .toc a:focus-visible {
+            color: var(--paper);
+        }
+
+        .content {
+            display: grid;
+            min-width: 0;
+            gap: 18px;
+        }
+
+        section {
+            min-width: 0;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+            padding: clamp(22px, 4vw, 34px);
+            overflow-wrap: anywhere;
+        }
+
+        section h2 {
+            color: var(--paper);
+            font-size: clamp(1.45rem, 2.6vw, 2.05rem);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        section h3 {
+            margin: 20px 0 8px;
+            color: var(--gold);
+            font-size: 1.05rem;
+        }
+
+        p {
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            margin: 0 0 14px 22px;
+            color: var(--muted);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--paper);
+        }
+
+        .notice {
+            background: #211c14;
+            border-color: rgba(255, 200, 87, 0.34);
+        }
+
+        .notice h2 {
+            color: var(--gold);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            margin-top: 16px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .data-table th {
+            background: var(--panel);
+            color: var(--paper);
+            font-size: 0.92rem;
+        }
+
+        .data-table td {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 6px 10px;
+            color: var(--muted);
+            background: rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .contact-card {
+            display: grid;
+            gap: 10px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .back-home {
+            display: inline-flex;
+            min-height: 46px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px;
+            padding: 11px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--ember);
+            background: var(--ember);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .back-home:hover,
+        .back-home:focus-visible {
+            color: #fff;
+            filter: brightness(1.08);
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--line);
+            background: #0b0b0a;
+            padding: 30px 0 38px;
+        }
+
+        .footer-inner {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .footer-inner a {
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        @media (max-width: 880px) {
+            .policy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                position: static;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-wrap,
+            .hero-inner,
+            main,
+            .footer-inner {
+                width: min(1080px, calc(100vw - 64px));
+            }
+
+            .nav-links a {
+                padding: 8px 9px;
+                font-size: 0.88rem;
+            }
+
+            .data-table,
+            .data-table tbody,
+            .data-table tr,
+            .data-table th,
+            .data-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .data-table thead {
+                display: none;
+            }
+
+            .data-table tr {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .data-table tr:last-child {
+                border-bottom: 0;
+            }
+
+            .data-table td {
+                border-bottom: 0;
+            }
+
+            .data-table td::before {
+                content: attr(data-label);
+                display: block;
+                color: var(--paper);
+                font-weight: 800;
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="../" aria-label="SkyBlade home">
+                <span class="brand-mark">SB</span>
+                <span>SkyBlade</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="../">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#deletion">Data Deletion</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-inner">
+            <p class="eyebrow">Privacy Policy</p>
+            <h1>SkyBlade Privacy Policy</h1>
+            <p class="summary">This policy explains how BlueSkyStudio handles data for SkyBlade, including app analytics, optional Google Play Games features, optional Google Play Billing purchases, support requests, security, retention, and deletion.</p>
+            <p class="updated">Last updated: June 14, 2026</p>
+        </div>
+    </div>
+
+    <main id="main">
+        <div class="policy-layout">
+            <aside class="toc" aria-label="Table of contents">
+                <h2>Contents</h2>
+                <a href="#scope">Scope</a>
+                <a href="#summary">Data Safety Summary</a>
+                <a href="#data">Data We Process</a>
+                <a href="#use">How We Use Data</a>
+                <a href="#sharing">Sharing</a>
+                <a href="#security">Security</a>
+                <a href="#deletion">Retention and Deletion</a>
+                <a href="#rights">Your Choices</a>
+                <a href="#children">Children</a>
+                <a href="#contact">Contact</a>
+            </aside>
+
+            <div class="content">
+                <section id="scope">
+                    <h2>1. Scope and Developer Information</h2>
+                    <p>This Privacy Policy applies to the mobile game <strong>SkyBlade</strong>, package name <strong>com.blueskystudio.skyblade</strong>, published by <strong>BlueSkyStudio</strong>.</p>
+                    <p>SkyBlade is an arcade shooter. The game does not require a BlueSkyStudio account to play. Some platform features may be available through Google services, such as Google Play Games Services for achievements or leaderboards and Google Play Billing for purchases.</p>
+                    <div class="contact-card">
+                        <p><strong>Developer:</strong> BlueSkyStudio</p>
+                        <p><strong>Privacy contact:</strong> <a href="mailto:lengyy6@gmail.com">lengyy6@gmail.com</a></p>
+                        <p><strong>Website:</strong> This GitHub Pages site is the official website and privacy policy host for SkyBlade.</p>
+                    </div>
+                </section>
+
+                <section class="notice" id="summary">
+                    <h2>2. Data Safety Summary</h2>
+                    <p>SkyBlade is designed to collect only the data needed to operate, maintain, secure, and improve the game and optional Google Play features.</p>
+                    <ul>
+                        <li><strong>No sale of personal information:</strong> BlueSkyStudio does not sell personal or sensitive user data.</li>
+                        <li><strong>No sensitive device permissions:</strong> SkyBlade does not request access to precise location, camera, microphone, contacts, SMS, call logs, calendar, or files outside normal app storage.</li>
+                        <li><strong>No BlueSkyStudio account:</strong> The game does not create a separate developer account. If Google Play Games is enabled and you sign in, that sign-in is handled by Google.</li>
+                        <li><strong>Privacy policy availability:</strong> This page is publicly accessible as HTML and is intended for the Google Play privacy policy URL.</li>
+                    </ul>
+                    <div class="pill-row" aria-label="Data categories">
+                        <span class="pill">App activity</span>
+                        <span class="pill">App info and performance</span>
+                        <span class="pill">Device or other identifiers</span>
+                        <span class="pill">Optional purchases</span>
+                        <span class="pill">Optional Play Games profile data</span>
+                    </div>
+                </section>
+
+                <section id="data">
+                    <h2>3. Data We Process</h2>
+                    <p>The exact data processed depends on the version of SkyBlade you use and which optional platform features are enabled.</p>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Examples</th>
+                                <th>Purpose</th>
+                                <th>Shared With</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Category">Local gameplay data</td>
+                                <td data-label="Examples">Game progress, settings, scores, unlocked content, and other save data stored on your device.</td>
+                                <td data-label="Purpose">Provide gameplay, save your progress, and remember preferences.</td>
+                                <td data-label="Shared With">Not shared by default. It may be removed when you clear app data or uninstall the game.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Category">Analytics and diagnostics</td>
+                                <td data-label="Examples">App launches, session information, gameplay events, app version, device model, operating system version, language, general country or region, Firebase installation ID, app instance ID, and diagnostic events.</td>
+                                <td data-label="Purpose">Measure game stability, understand feature performance, fix issues, and improve gameplay balance.</td>
+                                <td data-label="Shared With">Google Firebase / Google Analytics for Firebase, when analytics is enabled in the published build.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Category">Google Play Games Services data</td>
+                                <td data-label="Examples">Google Play Games player ID, display name, avatar, achievement progress, leaderboard scores, and sign-in status.</td>
+                                <td data-label="Purpose">Enable optional sign-in, achievements, and leaderboards.</td>
+                                <td data-label="Shared With">Google Play Games Services. This data is processed under Google's terms and privacy policies.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Category">Google Play Billing data</td>
+                                <td data-label="Examples">Purchased product ID, purchase token, transaction status, entitlement status, and refund or restoration status. Payment card details are handled by Google Play and are not received by BlueSkyStudio.</td>
+                                <td data-label="Purpose">Process optional in-app purchases, unlock purchased content, prevent fraud, and handle support requests.</td>
+                                <td data-label="Shared With">Google Play Billing and payment processors used by Google Play.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Category">Support communications</td>
+                                <td data-label="Examples">Your email address and any information you choose to include when contacting support.</td>
+                                <td data-label="Purpose">Respond to support, privacy, purchase, or deletion requests.</td>
+                                <td data-label="Shared With">Email and support service providers used to receive and respond to messages.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="use">
+                    <h2>4. How We Use Data</h2>
+                    <p>BlueSkyStudio uses data for the following purposes:</p>
+                    <ul>
+                        <li>Provide and maintain SkyBlade's core gameplay and settings.</li>
+                        <li>Save progress locally and restore optional purchase entitlements.</li>
+                        <li>Operate optional Google Play Games achievements and leaderboards.</li>
+                        <li>Analyze game performance, stability, and gameplay usage when analytics is enabled.</li>
+                        <li>Detect, prevent, and investigate fraud, abuse, technical errors, and security issues.</li>
+                        <li>Respond to support, privacy, and data deletion requests.</li>
+                        <li>Comply with legal, regulatory, tax, accounting, and Google Play policy obligations.</li>
+                    </ul>
+                </section>
+
+                <section id="sharing">
+                    <h2>5. Sharing and Third-Party Service Providers</h2>
+                    <p>BlueSkyStudio does not sell personal or sensitive user data. We may share or make data available only as described in this policy:</p>
+                    <ul>
+                        <li><strong>Google Firebase / Google Analytics for Firebase:</strong> analytics and diagnostics data used to understand app performance and improve the game.</li>
+                        <li><strong>Google Play Games Services:</strong> optional sign-in, achievements, leaderboard, and profile-related features.</li>
+                        <li><strong>Google Play Billing:</strong> optional purchase processing, entitlement management, refunds, and fraud prevention.</li>
+                        <li><strong>Legal and safety reasons:</strong> when required by law, valid legal process, security investigation, or to protect rights, users, and the public.</li>
+                        <li><strong>Business transfer:</strong> if SkyBlade or BlueSkyStudio assets are transferred, data may be transferred with appropriate notice where required.</li>
+                    </ul>
+                    <p>Third-party providers process data under their own terms and privacy policies. You can review Google's privacy practices at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> and Firebase privacy information at <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>.</p>
+                </section>
+
+                <section id="security">
+                    <h2>6. Security</h2>
+                    <p>We use reasonable administrative, technical, and organizational safeguards appropriate for a mobile game, including access controls, platform security features, and encrypted transport where data is transmitted by Google or service-provider SDKs.</p>
+                    <p>No method of transmission or storage is completely secure. If we become aware of a security issue that affects your personal information, we will take appropriate steps consistent with applicable law and platform requirements.</p>
+                </section>
+
+                <section id="deletion">
+                    <h2>7. Data Retention and Deletion</h2>
+                    <p>We retain data only for as long as reasonably necessary for the purposes described in this policy, unless a longer period is required for legal, security, tax, accounting, or dispute-resolution reasons.</p>
+                    <ul>
+                        <li><strong>Local gameplay data:</strong> stored on your device until you delete it, clear app data, or uninstall SkyBlade.</li>
+                        <li><strong>Analytics data:</strong> retained according to the Firebase / Google Analytics retention settings used for the project.</li>
+                        <li><strong>Purchase records:</strong> retained as needed to verify entitlements, process refunds, prevent fraud, and meet legal or accounting obligations.</li>
+                        <li><strong>Support messages:</strong> retained for the time needed to respond and maintain a record of the request.</li>
+                    </ul>
+                    <p>SkyBlade does not currently create a separate BlueSkyStudio user account. To request deletion of data that BlueSkyStudio can reasonably access, contact <a href="mailto:lengyy6@gmail.com">lengyy6@gmail.com</a> with the subject line "SkyBlade Data Deletion Request". We may need information from you to verify and process the request.</p>
+                    <p>For Google Play Games profile data, Google account data, Google Play purchase history, or data controlled directly by Google, use the privacy controls provided by Google for your account and Google Play services.</p>
+                </section>
+
+                <section id="rights">
+                    <h2>8. Your Choices and Privacy Rights</h2>
+                    <p>Depending on your location, you may have rights to access, correct, delete, restrict, object to, or receive a copy of personal information. You may also have the right to withdraw consent where processing depends on consent.</p>
+                    <p>You can exercise available rights by contacting <a href="mailto:lengyy6@gmail.com">lengyy6@gmail.com</a>. We will respond within a reasonable period required by applicable law and may ask for verification information before fulfilling a request.</p>
+                    <ul>
+                        <li>You can clear local game data through your device's app settings.</li>
+                        <li>You can uninstall SkyBlade to remove the game and local data from your device.</li>
+                        <li>You can manage Google Play Games and Google account privacy settings through Google's account tools.</li>
+                        <li>You can manage Google Play purchases and refunds through Google Play support channels.</li>
+                    </ul>
+                </section>
+
+                <section id="children">
+                    <h2>9. Children's Privacy</h2>
+                    <p>SkyBlade is not directed to children under 13 or to children under the minimum age required by local law. We do not knowingly collect personal information from children.</p>
+                    <p>If you believe a child has provided personal information to BlueSkyStudio through SkyBlade or support communications, contact us at <a href="mailto:lengyy6@gmail.com">lengyy6@gmail.com</a>. We will take reasonable steps to review and delete the information where required.</p>
+                </section>
+
+                <section id="transfers">
+                    <h2>10. International Transfers</h2>
+                    <p>SkyBlade may be offered globally. Data processed by Google Firebase, Google Play Games, Google Play Billing, email, or support providers may be transferred to and processed in countries other than your country of residence. We rely on service-provider safeguards and applicable legal mechanisms where required.</p>
+                </section>
+
+                <section id="changes">
+                    <h2>11. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy when SkyBlade, service providers, legal requirements, or Google Play policy requirements change. The "Last updated" date at the top of this page shows when the policy was most recently revised.</p>
+                    <p>If a change is material, we will provide notice through the app, this website, the Google Play listing, or another appropriate method where required.</p>
+                </section>
+
+                <section id="contact">
+                    <h2>12. Contact Us</h2>
+                    <p>For privacy questions, support requests, or data deletion requests, contact BlueSkyStudio:</p>
+                    <div class="contact-card">
+                        <p><strong>Email:</strong> <a href="mailto:lengyy6@gmail.com">lengyy6@gmail.com</a></p>
+                        <p><strong>App:</strong> SkyBlade</p>
+                        <p><strong>Package:</strong> com.blueskystudio.skyblade</p>
+                    </div>
+                    <a class="back-home" href="../">Back to SkyBlade Home</a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>&copy; 2026 BlueSkyStudio. SkyBlade. All rights reserved.</span>
+            <span><a href="../">Home</a> | <a href="mailto:lengyy6@gmail.com">Contact</a></span>
+        </div>
+    </footer>
+</body>
+</html>

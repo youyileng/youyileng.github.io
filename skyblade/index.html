@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkyBlade official website, Google Play website verification, screenshots, support contact, and privacy policy.">
+    <meta name="keywords" content="SkyBlade, BlueSkyStudio, arcade shooter, mobile game, Google Play, privacy policy">
+    <meta name="author" content="BlueSkyStudio">
+    <meta name="google-site-verification" content="w0i6kYODRf3JK-jUxWAIOKG-ZQNL3f3hKm8V3CuDLhM">
+    <meta property="og:title" content="SkyBlade - Official Website">
+    <meta property="og:description" content="Command the sky in a fast, polished arcade shooter built for mobile play.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="splash.png">
+    <title>SkyBlade - Official Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0;
+        }
+
+        :root {
+            --ink: #08090a;
+            --night: #10100e;
+            --steel: #1a1d1a;
+            --line: rgba(247, 239, 218, 0.16);
+            --paper: #f8f0df;
+            --muted: #c9c0ad;
+            --ember: #ff4d2f;
+            --gold: #ffc857;
+            --sky: #63d7ff;
+            --moss: #84a66a;
+            --shadow: rgba(0, 0, 0, 0.45);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+            background: var(--ink);
+            color: var(--paper);
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 16px;
+            top: -60px;
+            z-index: 20;
+            padding: 10px 14px;
+            background: var(--paper);
+            color: var(--ink);
+            border-radius: 6px;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid var(--line);
+            background: rgba(8, 9, 10, 0.86);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-wrap {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.02rem;
+            text-transform: uppercase;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            color: var(--ink);
+            background: var(--gold);
+            font-weight: 900;
+            box-shadow: 0 10px 28px rgba(255, 200, 87, 0.18);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            min-height: 40px;
+            padding: 9px 13px;
+            border-radius: 6px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--paper);
+            background: rgba(255, 255, 255, 0.08);
+            outline: none;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 78vh;
+            max-height: 860px;
+            overflow: hidden;
+            isolation: isolate;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .hero-art {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            grid-template-columns: 0.72fr 0.9fr 0.72fr;
+            gap: clamp(10px, 2vw, 22px);
+            align-items: center;
+            justify-content: center;
+            padding: 76px max(24px, 6vw) 38px;
+            opacity: 0.72;
+            transform: translateX(18vw);
+            z-index: -2;
+        }
+
+        .hero-art img {
+            width: min(28vw, 280px);
+            aspect-ratio: 941 / 1672;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(248, 240, 223, 0.24);
+            box-shadow: 0 26px 80px var(--shadow);
+        }
+
+        .hero-art img:nth-child(2) {
+            width: min(32vw, 330px);
+            transform: translateY(-2vh);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                linear-gradient(90deg, rgba(8, 9, 10, 0.98) 0%, rgba(8, 9, 10, 0.9) 36%, rgba(8, 9, 10, 0.48) 66%, rgba(8, 9, 10, 0.7) 100%);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 34%;
+            z-index: -1;
+            background: linear-gradient(0deg, var(--ink) 0%, rgba(8, 9, 10, 0) 100%);
+        }
+
+        .hero-content {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+            min-height: 78vh;
+            max-height: 860px;
+            display: grid;
+            align-items: center;
+            padding: 86px 0 58px;
+        }
+
+        .hero-copy {
+            width: min(650px, 100%);
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(3.2rem, 8vw, 7.2rem);
+            line-height: 0.92;
+            font-weight: 900;
+            text-transform: uppercase;
+            max-width: 7.8ch;
+        }
+
+        .hero-copy p {
+            margin-top: 24px;
+            max-width: 620px;
+            color: var(--muted);
+            font-size: clamp(1.02rem, 2.2vw, 1.25rem);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .button {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            text-decoration: none;
+            font-weight: 800;
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            transform: translateY(-2px);
+            outline: none;
+        }
+
+        .button.primary {
+            background: var(--ember);
+            border-color: var(--ember);
+            color: #fff;
+            box-shadow: 0 18px 44px rgba(255, 77, 47, 0.24);
+        }
+
+        .button.secondary {
+            color: var(--paper);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .meta-row {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            max-width: 720px;
+        }
+
+        .meta-item {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.055);
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--paper);
+            font-size: 0.98rem;
+        }
+
+        .meta-item span {
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .section {
+            padding: clamp(54px, 8vw, 96px) 0;
+        }
+
+        .section.alt {
+            background: #11110f;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .wrap {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .section-head p {
+            max-width: 520px;
+            color: var(--muted);
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: clamp(14px, 2.2vw, 28px);
+        }
+
+        .shot {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--night);
+            box-shadow: 0 24px 70px var(--shadow);
+        }
+
+        .shot img {
+            width: 100%;
+            aspect-ratio: 941 / 1672;
+            object-fit: cover;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .feature {
+            min-height: 190px;
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.055);
+        }
+
+        .feature .rule {
+            width: 38px;
+            height: 4px;
+            border-radius: 99px;
+            background: var(--sky);
+            margin-bottom: 22px;
+        }
+
+        .feature:nth-child(2) .rule {
+            background: var(--gold);
+        }
+
+        .feature:nth-child(3) .rule {
+            background: var(--ember);
+        }
+
+        .feature:nth-child(4) .rule {
+            background: var(--moss);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        .policy-panel {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 28px;
+            align-items: center;
+            padding: clamp(26px, 4vw, 42px);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #171612;
+        }
+
+        .policy-panel h2 {
+            font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+            line-height: 1.05;
+            margin-bottom: 14px;
+        }
+
+        .policy-panel p {
+            color: var(--muted);
+            max-width: 720px;
+        }
+
+        .policy-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .policy-list div {
+            padding: 13px 14px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.055);
+            color: var(--muted);
+            border: 1px solid var(--line);
+            font-size: 0.95rem;
+        }
+
+        .site-footer {
+            padding: 34px 0 42px;
+            background: #0b0b0a;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer-grid {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .footer-grid p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px 18px;
+        }
+
+        .footer-links a {
+            color: var(--paper);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus-visible {
+            color: var(--gold);
+            outline: none;
+        }
+
+        @media (max-width: 900px) {
+            .hero-art {
+                transform: translateX(25vw);
+                opacity: 0.5;
+            }
+
+            .meta-row,
+            .screenshots,
+            .feature-grid,
+            .policy-panel,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-head {
+                display: block;
+            }
+
+            .section-head p {
+                margin-top: 12px;
+            }
+
+            .footer-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-wrap {
+                min-height: 62px;
+            }
+
+            .nav-links a {
+                padding: 8px 9px;
+                font-size: 0.88rem;
+            }
+
+            .hero,
+            .hero-content {
+                min-height: 76svh;
+            }
+
+            .hero-art {
+                grid-template-columns: 1fr;
+                transform: translateX(30vw);
+                padding-top: 78px;
+            }
+
+            .hero-art img {
+                display: none;
+            }
+
+            .hero-art img:nth-child(2) {
+                display: block;
+                width: min(78vw, 320px);
+            }
+
+            .hero::before {
+                background: rgba(8, 9, 10, 0.78);
+            }
+
+            h1 {
+                font-size: clamp(3rem, 18vw, 4.9rem);
+            }
+
+            .hero-actions {
+                display: grid;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .meta-row {
+                display: none;
+            }
+
+            .meta-row {
+                margin-top: 28px;
+            }
+
+            h1 {
+                font-size: clamp(2.7rem, 14.6vw, 3.65rem);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="#top" aria-label="SkyBlade home">
+                <span class="brand-mark">SB</span>
+                <span>SkyBlade</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#screenshots">Screenshots</a>
+                <a href="#features">Features</a>
+                <a href="privacy.html/">Privacy Policy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="top" aria-label="SkyBlade hero">
+            <div class="hero-art" aria-hidden="true">
+                <img src="splash1.png" alt="">
+                <img src="splash.png" alt="">
+                <img src="splash2.png" alt="">
+            </div>
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Official mobile game website</p>
+                    <h1>SkyBlade</h1>
+                    <p>Take control of an elite fighter and carve through waves of enemies, dense bullet patterns, and towering bosses in a sharp vertical arcade shooter built for focused mobile play.</p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="privacy.html/">Privacy Policy</a>
+                        <a class="button secondary" href="#screenshots">View Screenshots</a>
+                    </div>
+                    <div class="meta-row" aria-label="Game facts">
+                        <div class="meta-item">
+                            <strong>Developer</strong>
+                            <span>BlueSkyStudio</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Platform</strong>
+                            <span>Android on Google Play</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Package</strong>
+                            <span>com.blueskystudio.skyblade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="screenshots">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Mission View</h2>
+                    <p>Portrait screenshots from the game show SkyBlade's mobile-first combat view, stage flow, and high-contrast arcade presentation.</p>
+                </div>
+                <div class="screenshots" aria-label="SkyBlade screenshots">
+                    <figure class="shot">
+                        <img src="splash.png" alt="SkyBlade gameplay screenshot showing aircraft combat and enemy fire">
+                    </figure>
+                    <figure class="shot">
+                        <img src="splash1.png" alt="SkyBlade gameplay screenshot showing a vertical stage and bullet patterns">
+                    </figure>
+                    <figure class="shot">
+                        <img src="splash2.png" alt="SkyBlade gameplay screenshot showing boss and stage action">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="features">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Built For Arcade Runs</h2>
+                    <p>SkyBlade keeps the focus on immediate control, readable action, and stage mastery.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature">
+                        <div class="rule"></div>
+                        <h3>Vertical Air Combat</h3>
+                        <p>Fly through scrolling stages, track enemy waves, and keep movement precise in a clean portrait layout.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="rule"></div>
+                        <h3>Boss Encounters</h3>
+                        <p>Each stage pushes timing, positioning, and survival against larger threats and escalating attack patterns.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="rule"></div>
+                        <h3>Power And Recovery</h3>
+                        <p>Collect items, strengthen your firepower, and use emergency tools when the screen turns hostile.</p>
+                    </article>
+                    <article class="feature">
+                        <div class="rule"></div>
+                        <h3>Mobile Sessions</h3>
+                        <p>Designed for quick starts, portrait play, and a direct arcade rhythm that respects small-screen focus.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-label="Privacy and verification">
+            <div class="wrap">
+                <div class="policy-panel">
+                    <div>
+                        <h2>Google Play Privacy Policy</h2>
+                        <p>This website hosts the public privacy policy for SkyBlade and is intended for the Google Play store listing, app content declarations, and website verification.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="privacy.html/">Open Privacy Policy</a>
+                            <a class="button secondary" href="mailto:lengyy6@gmail.com">Contact Support</a>
+                        </div>
+                    </div>
+                    <div class="policy-list" aria-label="Privacy highlights">
+                        <div>Clear developer identity and privacy contact.</div>
+                        <div>Data collection, sharing, retention, and deletion explained.</div>
+                        <div>Firebase, Google Play Games, and Google Play Billing covered.</div>
+                        <div>No sale of personal information.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <p>&copy; 2026 BlueSkyStudio. SkyBlade. All rights reserved.</p>
+                <p>Official website for Google Play verification and privacy policy hosting.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#top">Top</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="privacy.html/">Privacy Policy</a>
+                <a href="mailto:lengyy6@gmail.com">Support</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
